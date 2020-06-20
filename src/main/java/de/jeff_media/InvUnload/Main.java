@@ -79,7 +79,6 @@ public class Main extends JavaPlugin implements Listener {
 		this.saveDefaultConfig();
 
 		if (getConfig().getInt("config-version", 0) != currentConfigVersion) {
-			showOldConfigWarning();
 			ConfigUpdater configUpdater = new ConfigUpdater(this);
 			configUpdater.updateConfig();
 			configUpdater = null;

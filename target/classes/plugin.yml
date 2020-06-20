@@ -1,0 +1,29 @@
+main: de.jeff_media.InvUnload.Main
+name: ConnorUnlopader
+version: 4.1.0
+api-version: 1.13
+description: Unloads inventory in nearby matching chests
+author: Connor
+prefix: InvUnload
+database: false
+softdepend: [WorldGuard, ChestSort, PlotSquared, Spartan]
+commands:
+  unload:
+    description: Unloads inventory in nearby matching chests
+    usage: /<command> [radius]
+    permission: invunload.use
+    aliases: [store]
+  dump:
+    description: Unloads inventory in nearby chests
+    usage: /<command> [radius]
+    permission: invunload.use
+  unloadinfo:
+    description: Shows into which chests your last /unload or /dump went into
+    usage: /<command> [duration]
+    permission: invunload.use
+    aliases: [dumpinfo]
+permissions:
+  invunload.use:
+    description: Allows usage of command /unload, /dump, /unloadinfo and /dumpinfo
+  invunload.reload:
+    description: Allows to reload the config using /unload reload

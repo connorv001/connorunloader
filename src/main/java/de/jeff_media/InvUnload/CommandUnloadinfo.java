@@ -79,21 +79,7 @@ public class CommandUnloadinfo implements CommandExecutor {
 		}
 		main.visualizer.playLaser(affectedChests,p,duration);
 		boolean newVisualizer=true;
-		
-		if(newVisualizer) {
-			main.visualizer.toggleLaser(p);
-		}
-		else {
-			if(main.visualizer.activeVisualizations.containsKey(p.getUniqueId())) {
-				p.sendMessage("Experimental: Laser stopped");
-				main.visualizer.cancelVisualization(p);
-			} else {
-				p.sendMessage("Experimental: Laser started");
-				main.visualizer.play(p);
-			}
-		}
-		
-		
+
 		return true;
 	}
 
